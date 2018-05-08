@@ -14,20 +14,17 @@ package ubu.gii.dass.refactoring;
 public class Movie extends MovieType {
 	
 	private String _title;
-	private int _priceCode;
+	private MovieType _type;
 
 	public Movie(String title, int priceCode) {
 		_title = title;
-		setPriceCode(priceCode);
+		_type = MovieType.createMovieType(priceCode);
 	}
 
 	public int getPriceCode() {
-		return _priceCode;
+		return _type.getPriceCode();
 	}
 
-	public void setPriceCode(int arg) {
-		_priceCode = arg;
-	}
 
 	public String getTitle() {
 		return _title;

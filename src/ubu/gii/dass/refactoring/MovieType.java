@@ -6,6 +6,20 @@ public abstract class MovieType {
 	public static final int NEW_RELEASE = 1;
 	
 	public abstract int getPriceCode();
+
+	public static MovieType createMovieType(int priceCode) {
+		switch(priceCode) {
+		case REGULAR:
+			return new RegularMovie();
+		case NEW_RELEASE:
+			return new NewReleaseMovie();
+		case CHILDRENS:
+			return new ChildrensMovie();
+		default:
+			throw new RuntimeException("Wrong Type");
+			
+		}
+	}
 	
 	
 }

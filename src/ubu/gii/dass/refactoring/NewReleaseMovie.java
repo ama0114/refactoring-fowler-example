@@ -1,6 +1,6 @@
 package ubu.gii.dass.refactoring;
 
-public class NewRealeaseMovie extends MovieType{
+public class NewReleaseMovie extends MovieType{
 
 	@Override
 	public int getPriceCode() {
