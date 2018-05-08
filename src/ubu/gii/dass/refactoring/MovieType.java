@@ -6,7 +6,6 @@ public abstract class MovieType {
 	public static final int NEW_RELEASE = 1;
 	
 	public abstract int getPriceCode();
-	public abstract void setPriceCode(int arg);
 	
 	
 }

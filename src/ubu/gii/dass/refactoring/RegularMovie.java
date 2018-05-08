@@ -1,10 +1,11 @@
 package ubu.gii.dass.refactoring;
 
-public class RegularMovie extends Movie{
+public class RegularMovie extends MovieType{
 
-	public RegularMovie(String title, int priceCode) {
-		super(title, priceCode);
-		// TODO Auto-generated constructor stub
+	@Override
+	public int getPriceCode() {
+		return MovieType.REGULAR;
 	}
+
 
 }

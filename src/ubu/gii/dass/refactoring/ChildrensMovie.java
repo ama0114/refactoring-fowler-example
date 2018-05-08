@@ -1,10 +1,11 @@
 package ubu.gii.dass.refactoring;
 
-public class ChildrensMovie extends Movie{
+public class ChildrensMovie extends MovieType{
 
-	public ChildrensMovie(String title, int priceCode) {
-		super(title, priceCode);
-		// TODO Auto-generated constructor stub
+	@Override
+	public int getPriceCode() {
+		return MovieType.CHILDRENS;
 	}
+
 
 }
