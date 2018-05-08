@@ -11,11 +11,11 @@ package ubu.gii.dass.refactoring;
  * 
  */
 public class Rental {
-	private Movie _movie;
+	private MovieType _movie;
 	private int _daysRented;
 	private double amount;
 
-	public Rental(Movie movie, int daysRented) {
+	public Rental(MovieType movie, int daysRented) {
 		_movie = movie;
 		_daysRented = daysRented;
 	}
@@ -24,7 +24,7 @@ public class Rental {
 		return _daysRented;
 	}
 
-	public Movie getMovie() {
+	public MovieType getMovie() {
 		return _movie;
 	}
 	
@@ -32,15 +32,15 @@ public class Rental {
 		double thisAmount = 0;
 		// determine amounts for each line
 		switch (getMovie().getPriceCode()) {
-		case Movie.REGULAR:
+		case MovieType.REGULAR:
 			thisAmount += 2;
 			if (getDaysRented() > 2)
 				thisAmount += (getDaysRented() - 2) * 1.5;
 			break;
-		case Movie.NEW_RELEASE:
+		case MovieType.NEW_RELEASE:
 			thisAmount += getDaysRented() * 3;
 			break;
-		case Movie.CHILDRENS:
+		case MovieType.CHILDRENS:
 			thisAmount += 1.5;
 			if (getDaysRented() > 3)
 				thisAmount += (getDaysRented() - 3) * 1.5;
@@ -57,7 +57,7 @@ public class Rental {
 		frequentRenterPoints++;
 		
 		// add bonus for a two day new release rental
-		if ((getMovie().getPriceCode() == Movie.NEW_RELEASE)
+		if ((getMovie().getPriceCode() == MovieType.NEW_RELEASE)
 				&& getDaysRented() > 1)
 			frequentRenterPoints++;
 		// show figures for this rental

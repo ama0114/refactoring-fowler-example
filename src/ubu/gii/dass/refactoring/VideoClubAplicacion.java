@@ -2,9 +2,9 @@ package ubu.gii.dass.refactoring;
 public class VideoClubAplicacion {
 
 	public static void main(String[] arg) {
-		Movie m1 = new Movie("Sky Captain", 1);
-		Movie m3 = new Movie("Accion Mutante", 0);
-		Movie m4 = new Movie("Hermano Oso", 2);
+		MovieType m1 = new MovieType("Sky Captain", 1);
+		MovieType m3 = new MovieType("Accion Mutante", 0);
+		MovieType m4 = new MovieType("Hermano Oso", 2);
 
 		Customer c1 = new Customer("Manuel");
 
